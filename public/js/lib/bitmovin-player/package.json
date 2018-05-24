@@ -1,0 +1,62 @@
+{
+  "_from": "bitmovin-player@7.5.3",
+  "_id": "bitmovin-player@7.5.3",
+  "_inBundle": false,
+  "_integrity": "sha512-P82TKTy5VRFkc6ofEWWM69XSBEqKYCF4IomCZbjZJfjn1o0pg7dbGGcTJrF9RzkmMPh0HjUMxyS84HCrtaGMDA==",
+  "_location": "/bitmovin-player",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "bitmovin-player@7.5.3",
+    "name": "bitmovin-player",
+    "escapedName": "bitmovin-player",
+    "rawSpec": "7.5.3",
+    "saveSpec": null,
+    "fetchSpec": "7.5.3"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://teamcity.haivision.com:4873/bitmovin-player/-/bitmovin-player-7.5.3.tgz",
+  "_shasum": "75076268ca586b153188459553495cb0ab1f94fc",
+  "_spec": "bitmovin-player@7.5.3",
+  "_where": "/opt/haivision/src/cdvr/product",
+  "author": {
+    "name": "Bitmovin"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "The Bitmovin HTML5 Adaptive Streaming Player for MPEG-DASH and HLS",
+  "homepage": "https://bitmovin.com",
+  "keywords": [
+    "html5 video player",
+    "html5 video",
+    "html5 video thumbnail",
+    "video player with thumbnails",
+    "html5 360 video player",
+    "html5 replace flash",
+    "replace flash with html5",
+    "bitmovin player",
+    "bitdash player",
+    "dash player",
+    "mpeg dash player",
+    "bitmovin dash player",
+    "mpeg dash example",
+    "mpeg dash sample streams",
+    "hls player",
+    "hls html5",
+    "HTML5 player skin",
+    "video player skins",
+    "html5 video browser support",
+    "html5 web player"
+  ],
+  "main": "bitmovinplayer.js",
+  "name": "bitmovin-player",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "version": "7.5.3"
+}

@@ -1,0 +1,398 @@
+/* CSS */
+body {
+  font-family: sans-serif;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10pt;
+  text-shadow: 0 -2px 0 #374683;
+  text-rendering: optimizeLegibility;
+  background-color: #006EA0;
+  background-image: -moz-radial-gradient(50% 30% 90deg, circle, #006EA0 0%, #304160 600px);
+  background-image: -webkit-gradient(radial, 50% 30%, 0, 50% 30%, 600, from(#006EA0), to(#304160));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#006EA0, endColorstr=#304160)";
+  background-attachment: fixed;
+  min-width: 600px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+@media only screen and (min-width: 1100px) {
+  body {
+    font-size: 23pt; }
+ }
+
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 24pt; }
+ }
+
+h1 {
+  text-align: center;
+  font-size: 1.8em; }
+
+h3 {
+  font-size: 1em; }
+
+.darkOnLight {
+  color: #0263da;
+  text-shadow: 0 -2px 0 #324964; }
+
+div.game {
+  -moz-user-select: none; }
+
+div.pad a {
+  padding: 1.5rem 0.5rem 0.5rem 0.5rem; }
+
+div.pad div.icon {
+  background-image: url('../images/user128x128.png');
+  width: 128px;
+  height: 128px; }
+
+#header {
+  position: absolute;
+  left: 0px;
+  top: 1px;
+  right: 5px;
+  font-size: 11pt;
+  font-weight: normal;
+  text-shadow: none;
+  text-align: right; }
+
+#header a, #header a:visited {
+  color: #e1e1e1; }
+
+#instructions {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  margin-left: -40%;
+  width: 80%;
+  padding: 0px 40px 10px 40px;
+  background-color: #456788;
+  background-color: #456788;
+  font-size: 0.8em; }
+
+#board {
+  position: relative;
+  z-index: 2;
+  margin-top: 80px; }
+
+div#winnerFlag {
+  position: absolute;
+  top: -2.2em;
+  left: 0px;
+  background-color: #0081ff;
+  width: 100%;
+  height: 2em; }
+
+div#winnerFlag span {
+  line-height: 2em; }
+
+div#drawFlag {
+  position: absolute;
+  top: -2.2em;
+  left: 0px;
+  background-color: #e1e1e1;
+  background-color: #212121;
+  width: 100%;
+  height: 2em; }
+
+div#drawFlag span {
+  color: #f1f1f1;
+  /*color:#f5af08; orange*/
+  line-height: 2em; }
+
+div.player {
+  border: 0px solid #151515;
+  margin: 0 auto;
+  min-width: 243px;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  border: 0;
+  -webkit-box-shadow: rgba(20, 20, 20, 0.55) 1px 2px 3px inset;
+  -moz-box-shadow: rgba(20, 20, 20, 0.55) 1px 2px 3px inset;
+  -o-box-shadow: rgba(20, 20, 20, 0.55) 1px 2px 3px inset;
+  box-shadow: rgba(20, 20, 20, 0.55) 1px 2px 3px inset; }
+
+div.player label.score {
+  display: inline-block;
+  margin: 0.8em 0 0.8em 0; }
+
+div.player label.score span {
+  color: #f7ae03; }
+
+div.player .result {
+  font-family: Arial;
+  font-size: 4em;
+  color: #959595; }
+
+div.player h2 {
+  padding: 5px 0 5px 0; }
+
+#start-game {
+  cursor: pointer;
+  font-size: 0.875em; }
+
+div#players {
+  position: relative;
+  width: 100%;
+  height: 7em; }
+
+div#player1 {
+  position: absolute;
+  top: 0px;
+  left: 15%;
+  width: 22%;
+  height: 6.1em; }
+
+div#player2 {
+  position: absolute;
+  top: 0px;
+  right: 15%;
+  width: 22%;
+  height: 6.1em; }
+
+@media only screen and (max-width: 1000px) {
+  div#player1 {
+    left: 5%;
+    width: 22%; }
+
+  div#player2 {
+    right: 5%;
+    width: 22%; }
+ }
+
+/* 3D coin button */
+.rotate {
+  position: relative;
+  -webkit-transform: rotateY(0deg) translateZ(0px);
+  transform: rotateY(0deg) translateZ(0px);
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 1px; }
+
+.rotate.flip {
+  -webkit-transform: rotateY(180deg) translateZ(0px);
+  transform: rotateY(180deg) translateZ(0px); }
+
+.rotate .front, .rotate .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotateY(0deg) translateZ(0px);
+  transform: rotateY(0deg) translateZ(0px);
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  /* Chrome, Safari, Opera */
+  backface-visibility: hidden;
+  background: blue; }
+
+.rotate .back {
+  -webkit-transform: rotateY(180deg) translateZ(0px);
+  transform: rotateY(180deg) translateZ(0px);
+  background: red; }
+
+#start-game {
+  width: 100px;
+  border: 1px solid black;
+  text-align: center; }
+
+#start-game button {
+  padding-top: 20px; }
+
+#controls {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 6em;
+  padding: 0.5em 0em;
+  background-color: #456788;
+  background-color: #456788; }
+
+@media only screen and (max-height: 700px) {
+  /* no need to dock, we have enought space */
+  #controls.docked {
+    height: 0; }
+ }
+
+#picker {
+  position: absolute;
+  width: 100%; }
+
+#picker div.pick {
+  display: inline-block;
+  cursor: pointer;
+  padding: 20px;
+  margin: 5px; }
+
+#picker div.pick:hover {
+  background-color: #ffa676;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+#picker div.pick.selected:hover, div.pick.selected {
+  background-color: #ffa676;
+  background-color: rgba(199, 255, 118, 0.4);
+  background-color: #f3af04;
+  /*orange*/ }
+
+/* for round buttons*/
+#picker .pick {
+  width: 2.8em;
+  height: 2.8em;
+  line-height: 2.8em;
+  padding: 0.1em;
+  display: inline-block;
+  border: 3px solid #89b81a;
+  /*green*/
+  border: 3px solid #002a61;
+  /*dark blue*/ }
+
+#picker .pick span.scissor {
+  font-size: 0.84em; }
+
+#picker .circle-scissor {
+  line-height: 2.7em; }
+
+@media only screen and (min-height: 700px) {
+  /* larger buttons */
+  #picker .pick {
+    width: 4em;
+    height: 4em;
+    line-height: 4em; }
+
+  #controls {
+    height: 7em; }
+ }
+
+@media only screen and (min-height: 900px) {
+  /* larger buttons */
+  #picker .pick {
+    width: 5em;
+    height: 5em;
+    line-height: 5em; }
+
+  #controls {
+    height: 9em; }
+ }
+
+@media only screen and (min-height: 1200px) {
+  /* larger buttons */
+  #picker .pick {
+    width: 7em;
+    height: 7em;
+    line-height: 7em; }
+
+  #controls {
+    height: 11em; }
+ }
+
+div#timer {
+  position: relative;
+  border: 2px solid #151515;
+  max-width: 200px;
+  width: 80%;
+  margin: 0 auto;
+  top: -6.6em;
+  background: #f0f0f0; }
+
+div#timer .countdown {
+  padding: 20px 0 20px 0; }
+
+#timer_countdown_span {
+  font-size: 3em; }
+
+@media only screen and (max-width: 740px) {
+  /* move timer below player boxes */
+  div#timer {
+    margin-top: 0em;
+    max-width: 160px; }
+
+  #timer_countdown_span {
+    font-size: 2.2em; }
+ }
+
+#start-button-area {
+  position: relative;
+  top: -5.6em;
+  left: -10px;
+  width: 80%;
+  margin: 0 auto;
+  -webkit-box-sizing: content-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: content-box;
+  /* Firefox, other Gecko */
+  box-sizing: content-box;
+  /* Opera/IE 8+ */
+  width: 15%;
+  max-width: 100px;
+  padding: 0 3em;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 1000px; }
+
+div#helper {
+  position: absolute;
+  z-index: 5;
+  left: 20px;
+  bottom: 70px;
+  width: 250px;
+  -webkit-transform: rotate(20deg);
+  /* Chrome, Opera 15+, Safari 3.1+*/
+  -ms-transform: rotate(20deg);
+  /* IE 9 */
+  -o-transform: rotate(20deg);
+  transform: rotate(20deg);
+  /* Firefox 16+, IE 10+, Opera */ }
+
+div#helper canvas {
+  width: 200px;
+  margin-left: -20px; }
+
+div#helper .margin {
+  display: inline-block;
+  /*IE8+*/
+  width: 20px;
+  border: 0px solid black; }
+
+div#helper .margin.animeOn {
+  width: 40px; }
+
+button.ok {
+  font-size: 1em;
+  height: 2em;
+  line-height: 2em;
+  width: 300px; }
+
+.bgRock {
+  background-color: #456788;
+  background-color: #456788;
+  margin: 0; }
+
+.boxheader {
+  background-color: #456788;
+  background-color: rgba(69, 103, 136, 0.5);
+  margin: 0; }
+
+h2.boxheader {
+  margin: 0; }
+
+/* Smartphones (landscape) ----------- */
+@media screen and (orientation: landscape) and (max-height: 321px) {
+  /* save space on top to fit in landscape */
+  #board {
+    margin-top: 38px; }
+
+  div#player1 {
+    top: 12px; }
+
+  div#player2 {
+    top: 12px; }
+ }

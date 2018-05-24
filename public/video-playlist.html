@@ -1,0 +1,16 @@
+<video id="<%- elemId %>" class="video-js vjs-default-skin vjs-big-play-centered"
+  controls preload="auto" width="100%" height="100%"
+  poster="/assets/img/asset-960-540.png">
+ <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+</video>
+<% if ( segments != null ) { %>
+<div class="playlist-components">
+    <div class="playlist">
+        <ul></ul>
+    </div>
+    <div class="button-holder">
+        <img id="prev" alt="Previous video" src="/assets/img/Previous.png">
+        <img id="next" alt="Next video" src="/assets/img/Next.png">
+    </div>
+</div>
+<% } %>7

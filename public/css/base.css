@@ -1,0 +1,367 @@
+/* base.css - Common reusable CSS components not specific to the rock-paper-scissor game */
+/* Written by Francois Oligny-Lemieux 31.Oct.2014 */
+.floatRight {
+  float: right; }
+
+.hidden {
+  display: none; }
+
+.textAlignCenter {
+  text-align: center; }
+
+.margin0 {
+  margin: 0; }
+
+.marginAlignCenter {
+  margin: 0 auto;
+  display: inline-block; }
+
+.superCenter {
+  text-align: center; }
+
+.superCenter > div {
+  display: inline-block;
+  *display: inline;
+  zoom: 1; }
+
+.scroll-y {
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  overflow-scrolling: touch;
+  /*for iPad*/ }
+
+/* for IE if content does not take full height but our background should */
+/* not for other browser : it would add scrollbars */
+html.ie {
+  height: 100%; }
+
+.ie body {
+  min-height: 100%; }
+
+a.btn {
+  display: block;
+  background-color: #464646; }
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+div, textarea, section {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */ }
+
+::-moz-selection {
+  color: #fff;
+  background: #AE3E43; }
+
+::selection {
+  color: #fff;
+  background: #AE3E43; }
+
+.niceBorder {
+  border: 2px solid #2a679b;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+
+.transparent50 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  /* IE 8 */
+  filter: alpha(opacity=50);
+  /* IE 5-7 */
+  -moz-opacity: 0.5;
+  /* Netscape */
+  -khtml-opacity: 0.5;
+  /* Safari 1.x */
+  opacity: 0.5; }
+
+.round-button-circle {
+  -webkit-box-sizing: content-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: content-box;
+  /* Firefox, other Gecko */
+  box-sizing: content-box;
+  /* Opera/IE 8+ */
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  border: 10px solid #cfdcec;
+  overflow: hidden;
+  background: #4679BD;
+  box-shadow: 0 0 3px gray; }
+
+.round-button-circle:hover {
+  background: #30588e; }
+
+.round-button button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  display: block;
+  float: left;
+  width: 100%;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  line-height: 1em;
+  margin-top: -0.5em;
+  text-align: center;
+  color: #e2eaf3;
+  font-family: Verdana;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.transition1s {
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -webkit-transition: width 1s, height 1s, background-color 1s, -webkit-transform 1s;
+  transition: width 1s, height 1s, background-color 1s, transform 1s;
+  transition-timing-function: linear linear linear; }
+
+.rotating {
+  -ms-transform: rotateY(-180deg);
+  /* IE 9 */
+  -webkit-transform: rotateY(-180deg);
+  /* Chrome, Safari, Opera */
+  transform: rotateY(-180deg);
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear; }
+
+/* horizontal toggle */
+.horizontal-toggle {
+    width:66px;
+    height:25px;
+    font-size:12px;
+    font-weight:normal;
+    overflow:hidden;
+    border:1px solid grey;
+    border-radius: 40px;
+    box-shadow: inset 0px 1px 3px #CFD3D7, inset 0px 0px 2px #999;
+    -webkit-box-shadow: inset 0px 1px 3px #CFD3D7, inset 0px 0px 2px #999;
+    -moz-box-shadow: inset 0px 1px 3px #CFD3D7, inset 0px 0px 2px #999;
+    cursor:pointer;
+}
+.horizontal-toggle .runlength {
+    width:140px;
+    height:100%;
+    white-space:nowrap;
+    -webkit-transition: .15s;
+    transition: 0.15s;
+}
+.horizontal-toggle.off .runlength {
+    margin-left:-41px;
+}
+.horizontal-toggle div {
+    display:inline-block;
+    font-size:1em;
+    height:100%;
+    width:50px;
+    vertical-align: bottom;
+}
+.horizontal-toggle div.on {
+    background-color:Blue;
+    padding-left:15px;
+    padding-top:7px;
+    padding-right:15px;
+    width:65px;
+    -moz-box-shadow: inset 1px 2px 4px #54A3F3, inset 0px 0px 2px #000;
+    box-shadow: inset 1px 2px 4px #54A3F3, inset 0px 0px 2px #000;
+    -webkit-box-shadow: inset 1px 2px 4px #54A3F3, inset 0px 0px 2px #000;
+    -webkit-border-top-left-radius:16px;
+    -webkit-border-bottom-left-radius:16px;
+    -moz-border-radius-top-left:16px;
+    -moz-border-radius-bottom-left:16px;
+    border-top-left-radius:16px;
+    border-bottom-left-radius:16px;
+}
+.horizontal-toggle div.off {
+    padding-top:7px;
+    background-color:#797979;
+    padding-left:20px;
+    width:55px;
+    box-shadow: inset 0px 1px 3px #CFD3D7, inset 0px 0px 2px #999;
+    -moz-box-shadow: inset 0px 1px 3px #CFD3D7, inset 0px 0px 2px #999;
+    -webkit-box-shadow: inset 0px 1px 3px #CFD3D7, inset 0px 0px 2px #999;
+    -webkit-border-top-right-radius:16px;
+    -webkit-border-bottom-right-radius:16px;
+    -moz-border-radius-top-right:16px;
+    -moz-border-radius-bottom-right:16px;
+    border-top-right-radius:16px;
+    border-bottom-right-radius:16px;
+}
+.horizontal-toggle div.handle {
+    border-radius:16px;
+    position:relative;
+    left:-24px;margin-right:-35px;
+    top:0px;
+    background-color:#CCCCCC;
+    width:23px;height:23px;
+    background: -webkit-linear-gradient(top, rgba(219, 223, 227, 1) 0%,rgba(245, 245, 246, 1) 100%);
+}
+
+.horizontal-toggle.off div.handle {
+    background-color:#CFD3D7;
+}
+
+
+.indicator {
+    border: 1px solid #666666;
+    color:#666666;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    display:inline-block;
+    font-family:Arial;
+    font-size:10px;
+    text-shadow: -1px -1px 1px rgba(121,121,121, 0.5);
+    padding:2px 3px 1px 3px;
+    margin:0 5px;
+    line-height:12px;
+}
+
+.indicator.green {
+    border-color: #33b133;
+    color:#33b133;
+    text-shadow: -1px -1px 1px rgba(51,177,51, 0.5);
+    line-height:11px;
+}
+.indicator.amber {
+    border-color: #ef8f48;
+    color:#ef8f48;
+    text-shadow: -1px -1px 1px rgba(239,143,72, 0.5);
+}
+
+
+/* The following pretty cool CSS3 transitions are from
+   http://daneden.github.io/animate.css/
+   MIT license */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+
+  10%, 20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+@keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+
+  10%, 20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada; }
+
+@-webkit-keyframes bounceInDown {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0); }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0); }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0); }
+
+  100% {
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes bounceInDown {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0); }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0); }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0); }
+
+  100% {
+    -webkit-transform: none;
+    transform: none; } }
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown; }
+
+/* section ends */
