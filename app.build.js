@@ -10,18 +10,7 @@
     appDir: "prep", /* main html directory relative to this app.build.js file */
     baseUrl: "js", /* relative to "appDir"; is also the directory from which r.js should be executed */
     dir: "./dist/", /* output dir */
-    optimize:"uglify2",
-    uglify2: {
-     output: {
-         beautify: true
-     },
-     unused: false,  
-     compress: {
-         sequences: false
-     },
-     warnings: true,
-     mangle: false
-    },
+    optimize:"none",
     modules: [
         {
             name: "main" /* requirejs starting point */

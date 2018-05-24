@@ -7,10 +7,9 @@
 //
 //////////////////////////////////////////////////////
 var debug = true;
-define(function (require) {
+require(['lib/hls.min'], function(Hls) {
 
     // Modules that require instantiations
-    var Hls = require('lib/hls');
 
     /// documentReady() ///
     // For HTML5 compliant browser, this is only needed if we put scripts in head.

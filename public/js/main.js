@@ -7,10 +7,7 @@
 //
 //////////////////////////////////////////////////////
 var debug = true;
-define(function (require) {
-
-    // Modules that require instantiations
-    var bitmovin = require('lib/bitmovin-player/bitmovinplayer');
+require(['lib/bitmovin-player/bitmovinplayer.prod'], function (bitmovin) {
 
     /// documentReady() ///
     // For HTML5 compliant browser, this is only needed if we put scripts in head.

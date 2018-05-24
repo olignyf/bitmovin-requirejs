@@ -6,7 +6,6 @@ var minifyCSS = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var usemin = require('gulp-usemin');
 var shell = require('gulp-shell');
-var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 
 gulp.task('prep', function () {
@@ -15,6 +14,8 @@ gulp.task('prep', function () {
 });
 
 // sass is disabled, but here how it would look
+// add in package.json : 
+//    "gulp-sass": "^2.0.4",
 gulp.task('sass', function () {
     gulp.src('./public/css/*.scss')
         .pipe(watch('./public/css/*.scss'))
