@@ -17,7 +17,7 @@ $> gulp
 
 
 
-== How to build release using grunt (if you must) ==
+== How to build release using grunt ==
 Prerequisite
 $> npm install -g grunt-cli
 
